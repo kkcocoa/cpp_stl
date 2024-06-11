@@ -1,0 +1,29 @@
+template<typename Iterator, typename data>
+void replace(Iterator st, Iterator end, data a, data b)
+{
+    while (st != end)
+    {
+        if (*st == a)
+        {
+            *st = b;
+            cout << "Done!" << endl;
+        }
+        st++;
+    }
+}
+
+Iterator remove(Iterator begin, Iterator end, data a)
+{
+    Iterator fast = begin, slow = begin;
+    
+    for (; fast != end; fast ++)
+    {
+        if (* fast == a)
+            continue;
+        * slow = * fast;
+        slow ++;
+        cout << "removement complecated!" << endl;
+    }
+    // return rIterator 
+    return end;
+}
